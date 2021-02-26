@@ -253,23 +253,23 @@ if (_vtk_module_find_package_enabled)
     set(_vtk_module_find_package_required REQUIRED)
   endif ()
 
-  find_package(Python2
-    2.7
+  find_package(Python3
+    3.7
     
     
     ${_vtk_module_find_package_quiet}
     ${_vtk_module_find_package_required}
     COMPONENTS          Interpreter;Development.Module
     OPTIONAL_COMPONENTS Development.Embed)
-  if (NOT Python2_FOUND AND _vtk_module_find_package_fail_if_not_found)
+  if (NOT Python3_FOUND AND _vtk_module_find_package_fail_if_not_found)
     if (NOT ${CMAKE_FIND_PACKAGE_NAME}_FIND_QUIETLY)
       message(STATUS
         "Could not find the ${CMAKE_FIND_PACKAGE_NAME} package due to a "
-        "missing dependency: Python2")
+        "missing dependency: Python3")
     endif ()
     set("${CMAKE_FIND_PACKAGE_NAME}_Python_FOUND" 0)
     list(APPEND "${CMAKE_FIND_PACKAGE_NAME}_Python_NOT_FOUND_MESSAGE"
-      "Failed to find the Python2 package.")
+      "Failed to find the Python3 package.")
   endif ()
 endif ()
 
@@ -294,31 +294,6 @@ else ()
   set(_vtk_module_find_package_fail_if_not_found ON)
 endif ()
 
-if (_vtk_module_find_package_enabled)
-  set(_vtk_module_find_package_required)
-  if (_vtk_module_find_package_is_required)
-    set(_vtk_module_find_package_required REQUIRED)
-  endif ()
-
-  find_package(ZLIB
-    
-    
-    
-    ${_vtk_module_find_package_quiet}
-    ${_vtk_module_find_package_required}
-    COMPONENTS          
-    OPTIONAL_COMPONENTS )
-  if (NOT ZLIB_FOUND AND _vtk_module_find_package_fail_if_not_found)
-    if (NOT ${CMAKE_FIND_PACKAGE_NAME}_FIND_QUIETLY)
-      message(STATUS
-        "Could not find the ${CMAKE_FIND_PACKAGE_NAME} package due to a "
-        "missing dependency: ZLIB")
-    endif ()
-    set("${CMAKE_FIND_PACKAGE_NAME}_zlib_FOUND" 0)
-    list(APPEND "${CMAKE_FIND_PACKAGE_NAME}_zlib_NOT_FOUND_MESSAGE"
-      "Failed to find the ZLIB package.")
-  endif ()
-endif ()
 
 unset(_vtk_module_find_package_fail_if_not_found)
 unset(_vtk_module_find_package_enabled)
@@ -388,31 +363,6 @@ else ()
   set(_vtk_module_find_package_fail_if_not_found ON)
 endif ()
 
-if (_vtk_module_find_package_enabled)
-  set(_vtk_module_find_package_required)
-  if (_vtk_module_find_package_is_required)
-    set(_vtk_module_find_package_required REQUIRED)
-  endif ()
-
-  find_package(JPEG
-    
-    
-    
-    ${_vtk_module_find_package_quiet}
-    ${_vtk_module_find_package_required}
-    COMPONENTS          
-    OPTIONAL_COMPONENTS )
-  if (NOT JPEG_FOUND AND _vtk_module_find_package_fail_if_not_found)
-    if (NOT ${CMAKE_FIND_PACKAGE_NAME}_FIND_QUIETLY)
-      message(STATUS
-        "Could not find the ${CMAKE_FIND_PACKAGE_NAME} package due to a "
-        "missing dependency: JPEG")
-    endif ()
-    set("${CMAKE_FIND_PACKAGE_NAME}_jpeg_FOUND" 0)
-    list(APPEND "${CMAKE_FIND_PACKAGE_NAME}_jpeg_NOT_FOUND_MESSAGE"
-      "Failed to find the JPEG package.")
-  endif ()
-endif ()
 
 unset(_vtk_module_find_package_fail_if_not_found)
 unset(_vtk_module_find_package_enabled)

@@ -293,7 +293,7 @@ add_library(VTK::Python INTERFACE IMPORTED)
 
 set_target_properties(VTK::Python PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/vtk-9.0"
-  INTERFACE_LINK_LIBRARIES "VTK::CommonCore;Python2::Python"
+  INTERFACE_LINK_LIBRARIES "VTK::CommonCore;Python3::Python"
 )
 
 # Create imported target VTK::PythonUsed
@@ -336,7 +336,7 @@ set_target_properties(VTK::lzma PROPERTIES
 add_library(VTK::zlib INTERFACE IMPORTED)
 
 set_target_properties(VTK::zlib PROPERTIES
-  INTERFACE_LINK_LIBRARIES "ZLIB::ZLIB"
+  INTERFACE_LINK_LIBRARIES "${ZLIB_LIBRARY}"
 )
 
 # Create imported target VTK::IOCore
@@ -400,7 +400,7 @@ set_target_properties(VTK::DICOMParser PROPERTIES
 add_library(VTK::jpeg INTERFACE IMPORTED)
 
 set_target_properties(VTK::jpeg PROPERTIES
-  INTERFACE_LINK_LIBRARIES "JPEG::JPEG"
+  INTERFACE_LINK_LIBRARIES "${JPEG_LIBRARY}"
 )
 
 # Create imported target VTK::metaio
@@ -430,11 +430,10 @@ set_target_properties(VTK::pugixml PROPERTIES
 )
 
 # Create imported target VTK::tiff
-add_library(VTK::tiff SHARED IMPORTED)
+add_library(VTK::tiff INTERFACE IMPORTED)
 
 set_target_properties(VTK::tiff PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/vtk-9.0;${_IMPORT_PREFIX}/include/vtk-9.0/"
-  INTERFACE_SYSTEM_INCLUDE_DIRECTORIES "include/vtk-9.0/"
+  INTERFACE_LINK_LIBRARIES "${TIFF_LIBRARY}"
 )
 
 # Create imported target VTK::IOImage

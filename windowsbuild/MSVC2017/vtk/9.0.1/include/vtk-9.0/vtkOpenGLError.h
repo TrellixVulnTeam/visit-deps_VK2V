@@ -16,6 +16,7 @@
 #define vtkOpenGLError_h
 
 #include "vtkSetGet.h"
+#include "vtkObject.h"
 #include "vtk_glew.h"
 #include <sstream>
 
@@ -192,7 +193,7 @@ void vtkPrintOpenGLErrors(
  * header message can be appended to the stream. Returns true if no errors
  * were reported.
  */
-#if defined(VTK_REPORT_OPENGL_ERRORS)
+#if 0 //defined(VTK_REPORT_OPENGL_ERRORS)
 inline
 bool vtkOpenGLCheckErrors(const char* headerMessage = "")
 {

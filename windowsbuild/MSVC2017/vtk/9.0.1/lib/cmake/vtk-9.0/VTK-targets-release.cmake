@@ -470,16 +470,6 @@ set_target_properties(VTK::pugixml PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS VTK::pugixml )
 list(APPEND _IMPORT_CHECK_FILES_FOR_VTK::pugixml "${_IMPORT_PREFIX}/lib/vtkpugixml-9.0.lib" "${_IMPORT_PREFIX}/bin/vtkpugixml-9.0.dll" )
 
-# Import target "VTK::tiff" for configuration "Release"
-set_property(TARGET VTK::tiff APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(VTK::tiff PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "${_IMPORT_PREFIX}/lib/vtktiff-9.0.lib"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/vtktiff-9.0.dll"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS VTK::tiff )
-list(APPEND _IMPORT_CHECK_FILES_FOR_VTK::tiff "${_IMPORT_PREFIX}/lib/vtktiff-9.0.lib" "${_IMPORT_PREFIX}/bin/vtktiff-9.0.dll" )
-
 # Import target "VTK::IOImage" for configuration "Release"
 set_property(TARGET VTK::IOImage APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(VTK::IOImage PROPERTIES

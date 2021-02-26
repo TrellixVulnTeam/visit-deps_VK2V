@@ -141,7 +141,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/vtkObjectFactory.cmake")
 
 include("${CMAKE_CURRENT_LIST_DIR}/vtkModuleJson.cmake")
 
-set("${CMAKE_FIND_PACKAGE_NAME}_PYTHON_VERSION" "2")
+set("${CMAKE_FIND_PACKAGE_NAME}_PYTHON_VERSION" "3")
 set("${CMAKE_FIND_PACKAGE_NAME}_WRAP_PYTHON" "ON")
 if (${CMAKE_FIND_PACKAGE_NAME}_WRAP_PYTHON)
   include("${CMAKE_CURRENT_LIST_DIR}/VTKPython-targets.cmake")

@@ -16,7 +16,7 @@
 #define vtk_tiff_h
 
 /* Use the tiff library configured for VTK.  */
-#define VTK_MODULE_USE_EXTERNAL_vtktiff 0
+#define VTK_MODULE_USE_EXTERNAL_vtktiff 1
 
 #if VTK_MODULE_USE_EXTERNAL_vtktiff
 # include <tiffio.h>
