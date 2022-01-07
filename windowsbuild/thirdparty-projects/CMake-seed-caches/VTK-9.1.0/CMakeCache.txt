@@ -9,6 +9,8 @@ BUILD_TESTING:BOOL=false
 VTK_LEGACY_REMOVE:BOOL=true
 VTK_DATA_EXCLUDE_FROM_ALL:BOOL=true
 VTK_FORBID_DOWNLOADS:BOOL=true
+VTK_ENABLE_REMOTE_MODULES:BOOL=false
+VTK_INSTALL_PYTHON_EXES:BOOL=false
 
 # Would love to have this set to true, but it causes VisIt compile to
 # fail in debug mode
@@ -44,7 +46,7 @@ VTK_MODULE_ENABLE_VTK_RenderingFreeType:STRING=YES
 VTK_MODULE_ENABLE_VTK_RenderingOpenGL2:STRING=YES
 VTK_MODULE_ENABLE_VTK_RenderingVolumeOpenGL2:STRING=YES
 VTK_MODULE_ENABLE_VTK_libxml2:STRING=YES
-VTK_MODULE_ENABLE_VTK_RenderingOSPRay:STRING=YES
+VTK_MODULE_ENABLE_VTK_RenderingRayTracing:STRING=YES
 
 # python
 
@@ -54,14 +56,12 @@ Python3_LIBRARY:FILEPATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC
 Python3_INCLUDE_DIR:PATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC2017/python/3.7.7/include
 Python3_EXECUTABLE:FILEPATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC2017/python/3.7.7/python.exe
 
-#ospray not using with vtk9 - needs an updated version
-
-#OSPRAY_INSTALL_DIR:PATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC2017/ospray/1.6.1
-#embree_DIR:PATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC2017/embree/3.4.0
-#TBB_ROOT:PATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC2017/tbb/2018_20171205oss
+# ospray
+ospray_DIR:PATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC2017/ospray/2.8.0.x86_64.windows/lib/cmake/ospray-2.8.0
 
 # QT
 
+VTK_QT_VERSION:STRING=5
 VTK_MODULE_ENABLE_VTK_GUISupportQt:STRING=YES
 Qt5_DIR:PATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC2017/Qt/5.14.2/lib/cmake/Qt5
 
@@ -86,6 +86,6 @@ TIFF_LIBRARY_RELEASE:FILEPATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild
 
 
 #installation location
-CMAKE_INSTALL_PREFIX:PATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC2017/vtk/9.0.1
+CMAKE_INSTALL_PREFIX:PATH=C:/A_VisIt/InvestigateVTK9/visit-deps/windowsbuild/MSVC2017/vtk/9.1.0
 
 

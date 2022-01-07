@@ -1,0 +1,1 @@
+Beware, using this build system and the Install target will write to the Windows registry!  Without removal of the registry entry, CMake will forevermore look for szip and zlib in the hdf4- build directory!!!!
