@@ -4,8 +4,8 @@ CMAKE_INSTALL_PREFIX:PATH=C:/A_VisIt/ForRegression/visit-deps/windowsbuild/MSVC2
 HDF5_ENABLE_HSIZET:BOOL=ON
 HDF5_INCLUDE_PATH:PATH=C:/A_VisIt/ForRegression/visit-deps/windowsbuild/MSVC2017/hdf5/1.8.19/include
 HDF5_LIBRARY:FILEPATH=C:/A_VisIt/ForRegression/visit-deps/windowsbuild/MSVC2017/hdf5/1.8.19/lib/hdf5.lib
-LIBXML2_INCLUDE_PATH:PATH=C:/A_VisIt/ForRegression/visit-deps/windowsbuild/MSVC2017/vtk/8.1.0/include/vtk-8.1/vtklibxml2
-LIBXML2_LIBRARY:FILEPATH=C:/A_VisIt/ForRegression/visit-deps/windowsbuild/MSVC2017/vtk/8.1.0/lib/vtklibxml2-8.1.lib
+LIBXML2_INCLUDE_PATH:PATH=C:/A_VisIt/ForRegression/visit-deps/windowsbuild/MSVC2017/vtk/9.1.0/include/vtk-9.1/vtklibxml2/include
+LIBXML2_LIBRARY:FILEPATH=C:/A_VisIt/ForRegression/visit-deps/windowsbuild/MSVC2017/vtk/9.1.0/lib/vtklibxml2-9.1.lib
 
 XDMF_BUILD_EXAMPLES:BOOL=OFF
 XDMF_BUILD_MPI:BOOL=OFF

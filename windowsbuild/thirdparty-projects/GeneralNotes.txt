@@ -25,6 +25,7 @@ HDF5 1.8.19
 Need to define H5_BUILT_AS_DYNAMIC_LIB for all hdf5 dependent libs like
 CGNS
 SILO
+Xdmf
 
 
 CGNS
