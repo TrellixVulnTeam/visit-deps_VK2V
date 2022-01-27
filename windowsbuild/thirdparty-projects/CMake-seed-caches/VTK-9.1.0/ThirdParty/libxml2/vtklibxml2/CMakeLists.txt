@@ -772,14 +772,14 @@ endif ()
 
 configure_file(include/libxml/xmlversion.h.in include/libxml/xmlversion.h)
 #if (FALSE) # XXX(kitware): mask installation rules
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libxml/xmlversion.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/libxml2/libxml)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/include/libxml/xmlversion.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/libxml2/libxml)
 #endif ()
 
 if(MSVC)
 	configure_file(include/libxml/xmlwin32version.h.in libxml/xmlwin32version.h)
-	#if (FALSE) # XXX(kitware): mask installation rules
+	if (FALSE) # XXX(kitware): mask installation rules
 	install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libxml/xmlwin32version.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/libxml2/libxml )
-	#endif ()
+	endif ()
 endif()
 
 if(LIBXML2_WITH_PYTHON)
